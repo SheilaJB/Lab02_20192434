@@ -10,17 +10,15 @@ public class HomeController {
 
     @RequestMapping(value = "/home", method = RequestMethod.GET)
     @ResponseBody
-    public String home() {return "Home";}
+    public String home() {return "home";}
 
-    @PostMapping("/configuracion")
-    public String configuracion(
+    @PostMapping("/formulario")
+    public String formulario(
             @RequestParam("longitud") int longitud,
-            @RequestParam("numero") int numero,
+            @RequestParam("nummax") int nummax,
             @RequestParam("tema") String tema
-            ) {
-
-
-        return "Home";
-    }
-
+    )
+    {
+        return "Home";}
 }
+
